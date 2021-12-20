@@ -60,6 +60,7 @@ public class Help {
     public EmbedBuilder songList(){
         LoadQuestions load = new LoadQuestions();
         List<Map.Entry<Integer, Integer>> entries = new LinkedList<>(load.QuestionsFromDB().entrySet());
+        entries.sort(Map.Entry.comparingByValue((o1, o2) -> o2.compareTo(o1)));
 
         EmbedBuilder embed = new EmbedBuilder();
 
