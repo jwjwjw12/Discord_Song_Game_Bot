@@ -100,7 +100,6 @@ public class GameEmbed {
 
     public String scoreString() {
         List<Map.Entry<User, Integer>> entries = new LinkedList<>(game.getGamers().entrySet());
-        entries.sort(Map.Entry.comparingByValue((o1, o2) -> o2.compareTo(o1)));
 
         StringBuilder userString = new StringBuilder();
 
